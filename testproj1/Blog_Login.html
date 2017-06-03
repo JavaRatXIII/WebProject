@@ -1,0 +1,73 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- helloworld.html
+     A trivial document
+     -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+  <head> <title> Our first document: Hello World! </title>
+  <link rel = "stylesheet" tupe = "text/css" href = "style1.css" title = "Style 1"/>
+   <style>
+   body {background-color:lightyellow}
+   </style>
+
+  </head>
+  <body>
+	<p>
+		<a href = "Blog_Veiw.html">Return to Vlog</a>
+	</p>
+
+	<h1> Vlog on Jun's Vloggers </h1>
+
+	<form action = "form_text.php" method = "post">
+		User name: <input type = "text", name = "UserName" size = "22"/>
+<br />
+<br />
+		Password: <input type = "password", name = "Password" size = "15" maxlength = "15"/>
+<br />
+<br />
+		<input type = "submit" value = "Log in"/>
+	</form>
+
+    <?php
+	
+	$UserName = $_POST['username'];
+	$PassWord = $_POST['password'];
+	
+	if (!$UserName = "Jun")
+	{
+	    echo "You shall not vlog";
+	}
+	else
+	{
+	   function Redirect($url, $permanent = false)
+	   {
+		if (headers_sent() === false)
+		{
+		    header('Location: ' . $url, true, ($permanent === true) ? 301 : 302);
+		}
+	   }
+
+	   Redirect('file:///F:/Fundementals%20of%20Web/MiniProject/Blog_Veiw.html', false);
+	}
+
+	if (!$PassWord = "1994")
+	{
+	    echo "You shall not vlog";
+	}
+	else
+	{
+	   function Redirect($url, $permanent = false)
+	   {
+		if (headers_sent() === false)
+		{
+		    header('Location: ' . $url, true, ($permanent === true) ? 301 : 302);
+		}
+	   }
+
+	   Redirect('file:///F:/Fundementals%20of%20Web/MiniProject/Blog_Veiw.html', false);
+	}
+    ?>
+
+  </body>
+</html>
